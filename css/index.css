@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(245deg, #420dd3 20%,
+     #04e6e6 80%);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;                         /*Элементы равномерно распределяются внутри контейнера выравнивания вдоль главной оси*/
+    height: 70px;
+    background: #000;
+
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.logo {
+    background: #fff;
+    padding: 8px 50px;
+    text-transform: uppercase;                              /* upper literals*/
+    font-weight: 900;
+    font-size: 25px;
+    transform-origin: center; /* transform element to point*/
+    animation: drop 10s ease-in-out;
+    transform-origin: center;
+
+}
+
+@keyframes drop {
+    50%, 0% {
+        transform: rotate(360deg);
+    }
+    50%, 50% {
+        transform: rotate(20deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(30vh);
+        opacity: 0;
+    }
+    
+}
